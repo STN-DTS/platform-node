@@ -5,6 +5,9 @@
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "author": {
     "name": "Digital Technology Solutions",
     "url": "https://github.com/stn-dts/"
