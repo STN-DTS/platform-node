@@ -30,7 +30,7 @@
     "prettier": "^3.6.x",
     "rimraf": "^6.1.x",
     "typescript": "^5.9.x",
-    "typescript-eslint": "^8.46.x",
+    "typescript-eslint": "^8.47.x",
     "unbuild": "^3.6.x",
     "vite-tsconfig-paths": "^5.1.x",
     "vitest": "^4.0.x"

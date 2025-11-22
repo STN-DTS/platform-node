@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "@stn-dts/tab-id-hook",
+  "description": "TODO ::: GjB",
+  "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "Digital Technology Solutions",
+    "url": "https://github.com/stn-dts/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stn-dts/platform-node/",
+    "directory": "packages/telemetry/"
+  },
+  "bugs": {
+    "url": "https://github.com/stn-dts/platform-node/issues/"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "./dist/",
+    "./LICENSE.md",
+    "./README.md"
+  ],
+  "sideEffects": false,
+  "packageManager": "pnpm@10.10.0",
+  "engines": {
+    "node": ">= 22.x",
+    "pnpm": ">= 10.x"
+  },
+  "scripts": {
+    "build": "unbuild",
+    "build:ci": "npm run clean && npm run format:check && npm run lint:check && npm run typecheck && npm run test -- run && npm run clean && npm run build && npm run exports:check",
+    "clean": "rimraf ./dist/",
+    "exports:check": "attw --pack ./",
+    "format:check": "prettier --cache --cache-location ./node_modules/.cache/prettier/ --check ./",
+    "format:fix": "prettier --cache --cache-location ./node_modules/.cache/prettier/ --write ./",
+    "lint:check": "eslint --cache --cache-location: ./node_modules/.cache/eslint/ ./",
+    "lint:fix": "eslint --cache --cache-location: ./node_modules/.cache/eslint/ --fix ./",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage",
+    "typecheck": "tsc"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@testing-library/react": "^16.3.0",
+    "jsdom": "^27.2.0"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-router": "^7.0.0"
+  },
+  "prettier": {
+    "printWidth": 128
+  }
+}
