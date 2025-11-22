@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/package",
   "name": "@stn-dts/tab-id-hook",
   "description": "A React hook for managing unique, persistent tab identifiers to enable browser tab isolation.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "license": "MIT",
   "publishConfig": {
@@ -60,13 +60,13 @@
     "typecheck": "tsc"
   },
   "devDependencies": {
-    "@types/react": "^18.0.0",
-    "@testing-library/react": "^16.3.0",
-    "jsdom": "^27.2.0"
+    "@types/react": "^19.0.x",
+    "@testing-library/react": "^16.0.x",
+    "jsdom": "^27.0.x"
   },
   "peerDependencies": {
-    "react": "^18.0.0",
-    "react-router": "^7.0.0"
+    "react": ">= 18.0.x",
+    "react-router": ">= 7.0.x"
   },
   "prettier": {
     "printWidth": 128
