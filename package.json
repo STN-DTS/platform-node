@@ -20,6 +20,11 @@
     "node": ">= 22.x",
     "pnpm": ">= 10.x"
   },
+  "scripts": {
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "changeset publish"
+  },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.x",
     "@changesets/cli": "^2.29.x",
