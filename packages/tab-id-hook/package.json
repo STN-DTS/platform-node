@@ -2,9 +2,12 @@
   "$schema": "https://json.schemastore.org/package",
   "name": "@stn-dts/tab-id-hook",
   "description": "A React hook for managing unique, persistent tab identifiers to enable browser tab isolation.",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "author": {
     "name": "Digital Technology Solutions",
     "url": "https://github.com/stn-dts/"
