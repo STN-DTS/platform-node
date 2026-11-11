@@ -24,7 +24,7 @@
     "@arethetypeswrong/cli": "^0.18.x",
     "@eslint/js": "^9.39.x",
     "@types/node": "^22.18.x",
-    "@vitest/coverage-v8": "^4.0.x",
+    "@vitest/coverage-v8": "^5.1.x",
     "eslint": "^9.39.x",
     "prettier": "3.6.2",
     "rimraf": "^6.1.x",
