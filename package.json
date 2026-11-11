@@ -20,14 +20,8 @@
     "node": ">= 22.x",
     "pnpm": ">= 10.x"
   },
-  "scripts": {
-    "changeset": "changeset",
-    "version": "changeset version",
-    "release": "pnpm --recursive --if-present run build && changeset publish"
-  },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.x",
-    "@changesets/cli": "^2.29.x",
     "@eslint/js": "^9.39.x",
     "@types/node": "^22.18.x",
     "@vitest/coverage-v8": "^4.0.x",
