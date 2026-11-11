@@ -37,10 +37,17 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      # Lint, typecheck, and test are not included yet: they currently fail in packages/tab-id-hook
-      # (no ESLint config or tsconfig). Add them once fixed.
       - name: Check formatting
         run: pnpm --recursive --if-present run format:check
+
+      - name: Lint
+        run: pnpm --recursive --if-present run lint:check
+
+      - name: Typecheck
+        run: pnpm --recursive --if-present run typecheck
+
+      - name: Test
+        run: pnpm --recursive --if-present run test:coverage
 
       - name: Build
         run: pnpm --recursive --if-present run build

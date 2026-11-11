@@ -58,7 +58,7 @@
     "lint:check": "eslint --cache --cache-location ./node_modules/.cache/eslint/ --ext .ts,.tsx ./",
     "lint:fix": "eslint --cache --cache-location ./node_modules/.cache/eslint/ --ext .ts,.tsx --fix ./",
     "test": "vitest",
-    "test:coverage": "vitest --coverage",
+    "test:coverage": "vitest run --coverage",
     "typecheck": "tsc"
   },
   "devDependencies": {
