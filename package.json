@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/package",
-  "name": "@stn-dts/platform-node",
+  "name": "@dts-stn/platform-node",
   "description": "TypeScript libraries and components that power the Digital Technology Solution products.",
   "license": "MIT",
   "private": true,
@@ -23,7 +23,7 @@
   "scripts": {
     "changeset": "changeset",
     "version": "changeset version",
-    "release": "changeset publish"
+    "release": "pnpm --recursive --if-present run build && changeset publish"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.x",

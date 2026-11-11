@@ -2,47 +2,17 @@
 
 ## Release Workflow
 
-To release updates to packages in this monorepo, follow this manual process:
+Packages are published to [npmjs.org](https://www.npmjs.com/) under the
+`@dts-stn` scope by the [Release](.github/workflows/release.yaml) workflow.
 
-1.  **Create a Changeset:** Run the interactive tool to generate a changeset
-    file describing your changes.
+1.  **Create a Changeset:** In your pull request, run `pnpm changeset` and
+    commit the generated file.
+2.  **Merge to `main`:** The workflow opens (or updates) a "chore: version
+    packages" pull request that bumps versions and changelogs.
+3.  **Merge the version pull request:** The workflow builds and publishes the
+    changed packages to npmjs.org and creates git tags.
 
-    ```bash
-    pnpm changeset
-    ```
-
-2.  **Commit Changeset:** Commit the changeset file generated in the previous
-    step.
-
-    ```bash
-    git add .
-    git commit -m "docs(<package-name>): add changeset for <package-name>"
-    ```
-
-3.  **Bump Versions:** Update package versions and changelogs based on the
-    changeset.
-
-    ```bash
-    pnpm version
-    ```
-
-4.  **Commit Version Bumps:** Commit the updated `package.json` and
-    `CHANGELOG.md` files.
-
-    ```bash
-    git add .
-    git commit -m "chore(<package-name>): release <package-name>@<version>"
-    ```
-
-5.  **Publish:** Build and publish the packages to the registry.
-
-    ```bash
-    pnpm release
-    ```
-
-6.  **Tag Release:** Create a signed git tag for the release.
-
-    ```bash
-    git tag --sign <package-name>@<version> -m "<package-name>@<version>"
-    git push origin --tags
-    ```
+Publishing uses npm [trusted publishing](https://docs.npmjs.com/trusted-publishers)
+(OIDC); no npm token is stored in this repository. Each package must have a
+trusted publisher configured on npmjs.com for repository `STN-DTS/platform-node`
+and workflow filename `release.yaml`.
