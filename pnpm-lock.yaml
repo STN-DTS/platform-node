@@ -24,7 +24,7 @@ importers:
         specifier: ^9.39.x
         version: 9.39.1(jiti@2.6.1)
       prettier:
-        specifier: ^3.6.x
+        specifier: 3.6.2
         version: 3.6.2
       rimraf:
         specifier: ^6.1.x
