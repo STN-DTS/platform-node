@@ -145,10 +145,9 @@ describe("use-tab-id()", () => {
 
       act(() => {
         window.dispatchEvent(
-          new StorageEvent("storage", {
+          new window.StorageEvent("storage", {
             key: "tab-id",
             newValue: "xx-9999",
-            storageArea: window.sessionStorage,
           }),
         );
       });
