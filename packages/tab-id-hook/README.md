@@ -1,4 +1,4 @@
-# @stn-dts/tab-id-hook
+# @dts-stn/tab-id-hook
 
 A React hook for managing unique, persistent tab identifiers to enable browser
 tab isolation.
@@ -13,7 +13,7 @@ experience.
 
 ## The Solution
 
-`@stn-dts/tab-id-hook` provides a `useTabId()` hook that generates a unique
+`@dts-stn/tab-id-hook` provides a `useTabId()` hook that generates a unique
 identifier for each browser tab.
 
 - **Persistence:** The ID is stored in `sessionStorage`, so it survives page
@@ -30,17 +30,17 @@ v7](https://stn-dts.github.io/2025/09/05/browser-tab-isolation.html).
 ## Installation
 
 ```bash
-pnpm add @stn-dts/tab-id-hook
+pnpm add @dts-stn/tab-id-hook
 # or
-npm install @stn-dts/tab-id-hook
+npm install @dts-stn/tab-id-hook
 # or
-yarn add @stn-dts/tab-id-hook
+yarn add @dts-stn/tab-id-hook
 ```
 
 ## Usage
 
 ```tsx
-import { useTabId } from '@stn-dts/tab-id-hook';
+import { useTabId } from "@dts-stn/tab-id-hook";
 
 function MyComponent() {
   // Get the unique ID for this tab
@@ -65,8 +65,8 @@ in your server-side loaders or actions.
 Here is a contrived but typical example:
 
 ```tsx
-import { getTabId } from '@stn-dts/tab-id-hook';
-import { getSession } from './session'; // Your session management logic
+import { getTabId } from "@dts-stn/tab-id-hook";
+import { getSession } from "./session"; // Your session management logic
 
 export async function loader({ request }) {
   const tabId = getTabId(request);
@@ -77,7 +77,11 @@ export async function loader({ request }) {
   // a suspense or spinner component while waiting for the hook to generate a new tab id.
   //
 
-  if (!tabId) { return { /* 🤷 */ }; }
+  if (!tabId) {
+    return {
+      /* 🤷 */
+    };
+  }
 
   //
   // Use the tab ID to retrieve isolated data from the session
@@ -99,7 +103,7 @@ Returns the unique tab ID string.
 #### Options
 
 | Option              | Type      | Default    | Description                                                                   |
-|---------------------|-----------|------------|-------------------------------------------------------------------------------|
+| ------------------- | --------- | ---------- | ----------------------------------------------------------------------------- |
 | `idSearchParamKey`  | `string`  | `'tid'`    | The query parameter key used for storing the tab id in the URL.               |
 | `navigate`          | `boolean` | `true`     | Whether to automatically update the URL with the tab id as a query parameter. |
 | `reloadDocument`    | `boolean` | `false`    | Whether to reload the document after navigating (updating the URL).           |
