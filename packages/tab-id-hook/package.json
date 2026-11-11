@@ -16,11 +16,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/stn-dts/platform-node/",
+    "url": "git+https://github.com/STN-DTS/platform-node.git",
     "directory": "packages/tab-id-hook/"
   },
   "bugs": {
-    "url": "https://github.com/stn-dts/platform-node/issues/"
+    "url": "https://github.com/STN-DTS/platform-node/issues/"
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",

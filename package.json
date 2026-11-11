@@ -11,10 +11,10 @@
     "url": "https://github.com/stn-dts/"
   },
   "bugs": {
-    "url": "https://github.com/stn-dts/platform-node/issues/"
+    "url": "https://github.com/STN-DTS/platform-node/issues/"
   },
   "repository": {
-    "url": "https://github.com/stn-dts/platform-node/"
+    "url": "https://github.com/STN-DTS/platform-node/"
   },
   "engines": {
     "node": ">= 22.x",
