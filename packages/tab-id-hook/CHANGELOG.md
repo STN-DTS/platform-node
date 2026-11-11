@@ -1,5 +1,11 @@
 # @stn-dts/tab-id-hook
 
+## 1.2.0
+
+### Minor Changes
+
+- c932780: Publish under the `@dts-stn` npm scope (previously `@stn-dts`) using npm trusted publishing with provenance.
+
 ## 1.1.0
 
 ### Minor Changes
